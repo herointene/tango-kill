@@ -12,7 +12,7 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
       >
         &#129425; Ready to dive in?
         <br />
-        <span class="text-red-600"> Learn Vocabulary with Me </span>
+        <span class="text-red-600"> Learn Japanese vocabulary with me </span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
