@@ -3,7 +3,7 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
 </script>
 
 <template>
-  <div class="bg-gray-50">
+  <div class="">
     <div
       class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
     >
@@ -17,7 +17,7 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <router-link
-            to="/about"
+            to="/VocaBook"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-red-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-red-500 focus:outline-none"
             >Dive in</router-link
           >

@@ -1,0 +1,19 @@
+{
+  "instructions":{
+    "keyName":{
+      "0": "kana",
+      "1": "romaji",
+      "2": "kanji",
+      "3": "english translation"
+    }
+  },
+  "vocabulary":{
+    "book":[{
+      "name":"ひらがな・かたかな練習プリント",
+      "content": [
+        ["足","あし","ashi","foot"],
+        ["駅","えき","eki","station"]
+      ]}
+    ]
+  }
+}
