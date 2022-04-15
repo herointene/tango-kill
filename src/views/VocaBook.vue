@@ -1,41 +1,15 @@
 <template>
-  <div class="p-16 bg-slate-100 flex flex-wrap ">
-    <template v-for="(w, index) in bookShelf[0].content" key="index">
-      <WordCard @star="recordStar" :word="w" />
-    </template>
+  <div class=" w-full grid grid-cols-2 gap-2 mt-2">
+    <router-link class=" bg-slate-100 text-3xl text-center rounded-t-md" to="/VocaBook/Display">Words</router-link>
+    <router-link class=" bg-slate-300 text-3xl text-center rounded-t-md" to="/VocaBook/Starred">Starred</router-link>
   </div>
+  <router-view class="shadow-md"/>
 </template>
 
 <script>
-import WordCard from '../components/WordCard.vue'
-import vocaJson from '../VocabularyJson.json'
+
 export default {
-  components: {WordCard},
-  data() {
-    return {
-      vocaJson,
 
-    }
-  },
-
-  computed: {
-    bookShelf() {
-      return vocaJson.vocabulary.book       
-    }
-  },
-
-  methods: {
-    recordStar(w){
-      console.log(w);
-      //JSON stringfy
-      if(!localStorage.getItem('Starred')){
-        localStorage.setItem('Starred', '')
-      }
-
-
-
-    }
-  }
 }
 </script>
 

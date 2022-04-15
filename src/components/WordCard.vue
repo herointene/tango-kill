@@ -30,6 +30,9 @@ export default {
       starred: false,
     };
   },
+  mounted() {
+    //if localstorage contains this word, starred; vice versa
+  },
   methods: {
     handleStar() {
       this.$emit("star", this.word);
