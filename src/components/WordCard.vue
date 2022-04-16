@@ -1,10 +1,10 @@
 <template>
-  <div class="max-w-fit p-8 mr-8 shadow-md rounded-xl bg-white">
+  <div class="sm:max-w-fit w-full p-8 sm:mr-8 mb-8 shadow-xl shadow-slate-700 rounded-xl bg-gray-200">
     <div class="flex">
       <div class="text-7xl font-bold mr-6">{{ word[0] }}</div>
       <div>
-        <div class="text-3xl">{{ word[2] }}</div>
         <div class="text-3xl">{{ word[1] }}</div>
+        <div class="text-3xl">{{ word[2] }}</div>
       </div>
     </div>
     <hr class="my-4" />
@@ -24,22 +24,29 @@ import { StarIcon as SolidStar } from "@heroicons/vue/solid";
 export default {
   name: "WordCard",
   components: { StarIcon, SolidStar },
-  props: ["word"],
+  props: ["word","wKey"],
   data() {
     return {
       starred: false,
+      starredArr: JSON.parse(localStorage.getItem('Starred')) || []
     };
   },
   mounted() {
+    this.starredArr.includes(this.wKey)?
+    this.starred = true:
+    this.starred = false
+    
+    
     //if localstorage contains this word, starred; vice versa
   },
   methods: {
     handleStar() {
-      this.$emit("star", this.word);
-      this.starred = true;
+      this.$emit("star", this.wKey)
+      this.starred = true
     },
     removeStar() {
-      this.starred = false;
+      this.$emit("unstar", this.wKey)
+      this.starred = false
     },
   },
 };

@@ -1,18 +1,30 @@
 <template>
-  <div class=" w-full grid grid-cols-2 gap-2 mt-2">
-    <router-link class=" bg-slate-100 text-3xl text-center rounded-t-md" to="/VocaBook/Display">Words</router-link>
-    <router-link class=" bg-slate-300 text-3xl text-center rounded-t-md" to="/VocaBook/Starred">Starred</router-link>
+  <div class="bg-slate-800 min-h-screen pt-2">
+    <div class="w-full flex">
+      <router-link
+        class=" bg-slate-700 text-white text-3xl text-center rounded-t-md hover:bg-slate-500 transition duration-200 w-48"
+        active-class="active"
+        to="/VocaBook/Display"
+        >&#128214;</router-link
+      >
+      <router-link
+        class="bg-slate-700 text-white text-3xl text-center rounded-t-md hover:bg-slate-500 transition duration-200 w-48"
+        active-class="active"
+        to="/VocaBook/Starred"
+        >&#11088;</router-link
+      >
+    </div>
+    <router-view class="shadow-lg shadow-slate-900 bg-slate-600 " />
   </div>
-  <router-view class="shadow-md"/>
 </template>
 
 <script>
-
-export default {
-
-}
+export default {};
 </script>
 
-<style>
+<style scoped>
+.active{
+  background: rgb(71,85,105);
+}
 
 </style>

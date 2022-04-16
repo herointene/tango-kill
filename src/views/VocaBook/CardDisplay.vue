@@ -1,7 +1,7 @@
 <template>
-  <div id="CardDisplay" class="p-16 bg-slate-100 flex flex-wrap">
+  <div id="CardDisplay" class="sm:p-16 p-3 flex flex-wrap ">
     <template v-for="(w, index) in bookShelf[0].content" key="index">
-      <WordCard @star="recordStar" :word="w" />
+      <WordCard @star="recordStar" @unstar="delStar" :word="w" :wKey="index" />
     </template>
   </div>
 </template>
@@ -19,20 +19,24 @@ export default {
 
   computed: {
     bookShelf() {
-      return vocaJson.vocabulary.book;
+      return vocaJson.vocabulary.book
     },
   },
 
   methods: {
-    recordStar(w) {
+    recordStar(wKey) {
       //JSON stringfy
       if (!localStorage.getItem("Starred")) {
-        localStorage.setItem("Starred", JSON.stringify([]));
+        localStorage.setItem("Starred", JSON.stringify([]))
       }
-      const starredArray = JSON.parse(localStorage.getItem("Starred"));
-      starredArray.push(w);
-      localStorage.setItem("Starred", JSON.stringify(starredArray));
-      console.log(localStorage.getItem("Starred"));
+      let starredArray = JSON.parse(localStorage.getItem("Starred"))
+      starredArray.push(wKey)
+      localStorage.setItem("Starred", JSON.stringify(starredArray))
+    },
+    delStar(wKey) {
+      let starredArray = JSON.parse(localStorage.getItem("Starred"))
+      starredArray = starredArray.filter(i => i !== wKey)
+      localStorage.setItem("Starred", JSON.stringify(starredArray))
     },
   },
 };

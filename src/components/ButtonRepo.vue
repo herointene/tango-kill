@@ -15,11 +15,11 @@
         text-base
         font-medium
         leading-6
-        text-red-600
+        text-sky-600
         transition
         duration-150
         ease-in-out
-        hover:text-red-500
+        hover:text-sky-400
         focus:outline-none
       "
       >Learn more</a
