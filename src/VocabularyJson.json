@@ -12,7 +12,33 @@
       "name":"ひらがな・かたかな練習プリント",
       "content": [
         ["足","あし","ashi","foot"],
-        ["駅","えき","eki","station"]
+        ["貝","かい","kai","shell"],
+        ["牛","うし","ushi","cow, ox"],
+        ["駅","えき","eki","station"],
+        ["塩","しお","shio","salt"],
+        ["傘","かさ","kasa","umbrella"],
+        ["櫛","くし","kushi","comb"],
+        ["池","いけ","ike","pond"],
+        ["此処","ここ","koko","here"],
+        ["そこ","そこ","soko","there"],
+        ["西瓜","すいか","suika","watermelon"],
+        ["汗","あせ","ase","sweat"],
+        ["太鼓","たいこ","taiko","drum"],
+        ["家","うち","uchi","house"],
+        ["靴","うつ","kutsu","shoes"],
+        ["手","て","te","hand"],
+        ["糸","いと","ito","thread"],
+        ["魚","さかな","sakana","fish"],
+        ["蟹","かに","kani","crab"],
+        ["犬","いぬ","inu","dog"],
+        ["猫","ねこ","neko","cat"],
+        ["角","つの","tsuno","horn"],
+        ["橋","はし","hashi","bridge"],
+        ["火","ひ","hi","fire"],
+        ["笛","ふえ","fue","flute"],
+        ["へい","へい","hei","wall"],
+        ["星","ほし","hoshi","star"]
+        
       ]}
     ]
   }
