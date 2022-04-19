@@ -1,6 +1,6 @@
 <template>
   <div class="sm:max-w-fit w-full p-8 sm:mr-8 mb-8 shadow-xl shadow-slate-700 rounded-xl bg-gray-200">
-    <div class="flex">
+    <div class="flex flex-wrap">
       <div class="text-7xl font-bold mr-6">{{ word[0] }}</div>
       <div>
         <div class="text-3xl">{{ word[1] }}</div>
