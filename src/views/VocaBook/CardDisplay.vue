@@ -15,11 +15,23 @@
           grid grid-cols-2
         "
       >
-        <div class=" rounded-l-md bg-slate-700 cursor-pointer" :class="{'bg-slate-900': !gridActive}" @click="gridActive=false"></div>
-        <div class=" rounded-r-md bg-slate-700 cursor-pointer" :class="{'bg-slate-900': gridActive}" @click="gridActive=true"></div>
+        <div
+          class="rounded-l-md bg-slate-700 cursor-pointer"
+          :class="{ 'bg-slate-900': !gridActive }"
+          @click="gridActive = false"
+        >
+          <ViewListIcon class="text-gray-200 w-6 pt-1 m-auto" :class="{ 'text-gray-500': gridActive }" />
+        </div>
+        <div
+          class="rounded-r-md bg-slate-700 cursor-pointer"
+          :class="{ 'bg-slate-900': gridActive }"
+          @click="gridActive = true"
+        >
+          <ViewGridIcon class="text-gray-200 w-6 pt-1 m-auto" :class="{ 'text-gray-500': !gridActive }" />
+        </div>
       </div>
     </div>
-    <div id="CardDisplay" v-if="gridActive===false" class="flex flex-wrap">
+    <div id="CardDisplay" v-if="gridActive === false" class="flex flex-wrap">
       <template v-for="(w, index) in bookShelf[0].content" key="index">
         <WordCard
           @star="recordStar"
@@ -29,7 +41,7 @@
         />
       </template>
     </div>
-    <div id="MiniCardDisplay" v-if="gridActive===true" class="flex flex-wrap">
+    <div id="MiniCardDisplay" v-if="gridActive === true" class="flex flex-wrap">
       <template v-for="(w, index) in bookShelf[0].content" key="index">
         <MiniWordCard
           @star="recordStar"
@@ -46,12 +58,14 @@
 import WordCard from "../../components/WordCard.vue";
 import MiniWordCard from "../../components/MiniWordCard.vue";
 import vocaJson from "../../VocabularyJson.json";
+import { ViewListIcon } from "@heroicons/vue/outline";
+import { ViewGridIcon } from "@heroicons/vue/outline";
 export default {
-  components: { WordCard, MiniWordCard },
+  components: { WordCard, MiniWordCard, ViewListIcon, ViewGridIcon },
   data() {
     return {
       vocaJson,
-      gridActive: true
+      gridActive: false,
     };
   },
 
