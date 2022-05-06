@@ -18,16 +18,22 @@
         <div
           class="rounded-l-md bg-slate-700 cursor-pointer"
           :class="{ 'bg-slate-900': !gridActive }"
-          @click="gridActive = false"
+          @click="toggleGridView(false)"
         >
-          <ViewListIcon class="text-gray-200 w-6 pt-1 m-auto" :class="{ 'text-gray-500': gridActive }" />
+          <ViewListIcon
+            class="text-gray-200 w-6 pt-1 m-auto"
+            :class="{ '!text-gray-500': gridActive }"
+          />
         </div>
         <div
           class="rounded-r-md bg-slate-700 cursor-pointer"
           :class="{ 'bg-slate-900': gridActive }"
-          @click="gridActive = true"
+          @click="toggleGridView(true)"
         >
-          <ViewGridIcon class="text-gray-200 w-6 pt-1 m-auto" :class="{ 'text-gray-500': !gridActive }" />
+          <ViewGridIcon
+            class="text-gray-200 w-6 pt-1 m-auto"
+            :class="{ '!text-gray-500': !gridActive }"
+          />
         </div>
       </div>
     </div>
@@ -65,7 +71,7 @@ export default {
   data() {
     return {
       vocaJson,
-      gridActive: false,
+      gridActive: (localStorage.getItem("GridView") == 'true') || false,
     };
   },
 
@@ -76,19 +82,23 @@ export default {
   },
 
   methods: {
+    toggleGridView(flag) {
+      localStorage.setItem("GridView", flag)
+      this.gridActive = flag
+    },
     recordStar(wKey) {
       //JSON stringfy
       if (!localStorage.getItem("Starred")) {
-        localStorage.setItem("Starred", JSON.stringify([]));
+        localStorage.setItem("Starred", JSON.stringify([]))
       }
-      let starredArray = JSON.parse(localStorage.getItem("Starred"));
-      starredArray.push(wKey);
-      localStorage.setItem("Starred", JSON.stringify(starredArray));
+      let starredArray = JSON.parse(localStorage.getItem("Starred"))
+      starredArray.push(wKey)
+      localStorage.setItem("Starred", JSON.stringify(starredArray))
     },
     delStar(wKey) {
-      let starredArray = JSON.parse(localStorage.getItem("Starred"));
-      starredArray = starredArray.filter((i) => i !== wKey);
-      localStorage.setItem("Starred", JSON.stringify(starredArray));
+      let starredArray = JSON.parse(localStorage.getItem("Starred"))
+      starredArray = starredArray.filter((i) => i !== wKey)
+      localStorage.setItem("Starred", JSON.stringify(starredArray))
     },
   },
 };

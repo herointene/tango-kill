@@ -45,7 +45,7 @@ setInterval(() => {
         TANGOKILL.
       </div>
       <div class="text-gray-500 ">
-        Software Copyright Ted WU @2022
+        Software Copyright (MIT) Ted WU @2022
       </div>
     </footer>
   </div>
