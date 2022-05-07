@@ -15,7 +15,7 @@
     @click="toggleStar"
   >
     <div class="flex flex-wrap">
-      <div class="text-3xl font-bold">{{ word[0] }}</div>
+      <div id="kanjiDisplayMini" class="text-3xl font-bold">{{ word[0] }}</div>
     </div>
   </div>
 </template>

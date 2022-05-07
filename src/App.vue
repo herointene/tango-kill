@@ -40,12 +40,12 @@ setInterval(() => {
     <main>
       <router-view />
     </main>
-    <footer class="bg-black shadow py-4 lg:py-12 sm:px-6 lg:px-8">
-      <div class=" text-2xl text-white">
+    <footer class="bg-black shadow py-4 lg:py-12 px-6 lg:px-8">
+      <div class=" text-2xl text-white font-extrabold font-serif">
         TANGOKILL.
       </div>
       <div class="text-gray-500 ">
-        Software Copyright (MIT) Ted WU @2022
+        Software Copyright (MIT) ©2022 Ted WU
       </div>
     </footer>
   </div>
