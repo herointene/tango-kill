@@ -40,7 +40,7 @@ setInterval(() => {
     <main>
       <router-view />
     </main>
-    <footer class="bg-black shadow py-4 lg:py-12 px-6 lg:px-8">
+    <footer class="bg-black shadow py-6 lg:py-12 px-6 lg:px-8">
       <div class=" text-2xl text-white font-extrabold font-serif">
         TANGOKILL.
       </div>

@@ -22,7 +22,7 @@
         hover:text-sky-400
         focus:outline-none
       "
-      >Learn more</a
+      >Learn more &#129125;</a
     >
   </div>
 </template>

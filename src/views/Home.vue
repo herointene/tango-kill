@@ -1,5 +1,6 @@
 <script setup>
 import ButtonRepo from "@/components/ButtonRepo.vue";
+import NoticeBlock from "../components/NoticeBlock.vue";
 </script>
 
 <template>
@@ -57,5 +58,43 @@ import ButtonRepo from "@/components/ButtonRepo.vue";
         <ButtonRepo />
       </div>
     </div>
+
+    <NoticeBlock>
+      <h1 class="text-2xl font-bold leading-10">
+        <img
+          class="mr-2 inline"
+          src="https://img.icons8.com/tiny-color/24/000000/experimental-adventures-tiny-color.png"
+        />
+        Add TangoKill to your Home screen!
+      </h1>
+      <p class="text-slate-300 mt-2">
+        If you are using iOS devices, just open this link in Safari then click
+        <img
+          class="inline"
+          src="https://img.icons8.com/color/24/000000/share-rounded.png"
+        />
+        and select "Add to home button".<br />
+        What is
+        <a
+          class="text-sky-200 underline"
+          target="_blank"
+          href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+          >Progressive Web Apps(PWA)? &#129125;</a
+        >
+      </p>
+    </NoticeBlock>
+
+    <NoticeBlock>
+      <h1 class="text-2xl font-bold leading-10">
+        <img
+          class="mr-2 inline"
+          src="https://img.icons8.com/fluency/24/000000/star.png"
+        />
+        Save your "Star" words on your device! 
+      </h1>
+      <p class="text-slate-300 mt-2">
+        TangoKill uses LocalStorage to record users data safely. Click &#11088; and save your important words.
+      </p>
+    </NoticeBlock>
   </div>
 </template>
