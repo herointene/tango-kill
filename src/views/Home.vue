@@ -65,15 +65,15 @@ import NoticeBlock from "../components/NoticeBlock.vue";
           class="mr-2 inline"
           src="https://img.icons8.com/tiny-color/24/000000/experimental-adventures-tiny-color.png"
         />
-        Add TangoKill to your Home screen!
+        Add TangoKill to your Home Screen!
       </h1>
       <p class="text-slate-300 mt-2">
-        If you are using iOS devices, just open this webapp in Safari then click
+        If you are using iOS devices, just open this webapp in Safari then tap
         <img
           class="inline"
           src="https://img.icons8.com/color/24/000000/share-rounded.png"
         />
-        and select "Add to home screen".<br />
+        and select "Add to Home Screen".<br />
         What is
         <a
           class="text-sky-200 underline"
